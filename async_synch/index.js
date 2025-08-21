@@ -61,11 +61,24 @@ fetch("https://jsonplaceholder.typicode.com/albums")
   })
   //;.catch(() => {});
 // 2. Using Async/Await
-async function fetchData() {
+async function fetchAlbumsData() {
+    try{
   const albums = await fetch("https://jsonplaceholder.typicode.com/albums");
-  const photos = await fetch("https://jsonplaceholder.typicode.com/photos");
   const aData = await albums.json();
-  const pData = await photos.json();
-  console.log(aData, pData);
+  console.log(aData);
+}catch(e){
+    console.log(e)
 }
-fetchData();
+}
+
+async function fetchPhoteData() {
+try{
+    const photos = await fetch("https://jsonplaceholder.typicode.com/photos");
+    const pData = await photos.json();
+    console.log( pData);
+}catch(e){
+    console.log(e)
+}
+}
+fetchPhoteData();
+fetchAlbumsData();
