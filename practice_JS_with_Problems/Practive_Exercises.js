@@ -1,0 +1,108 @@
+console.log('------------THIS IS THE EASY SECTION---------------')
+//Q1- sum if two numbers
+// function that takes in two numbers and returns the sum of them
+function sumOfTwoNumbers(num1, num2) {
+  return num1 + num2;
+}
+console.log("Sum is: " + sumOfTwoNumbers(1, 2));
+
+//Q2 Covert Hours into seconds
+//function that converts hours to seconds
+//let seconds = 3600;
+function hoursIntoSeconds(hours) {
+  return hours * 60 * 60;
+}
+console.log("Seconds is: " + hoursIntoSeconds(3));
+
+//Q3 calculate the perimeter of a rectangle
+// function that take the length and width of a rectangle and returns its perimeter
+// (L*2)+ (W*2)
+function calculatePerimeter(length, width) {
+  return length * 2 + width * 2;
+}
+console.log("Perimeter is: " + calculatePerimeter(3, 12));
+
+//Q4 calculate the area of a triangle
+//function that takes the base and height of a triangle and returns its area
+function calculateArea(base, height) {
+  return 0.5 * base * height;
+}
+console.log("Area is: " + calculateArea(4, 3));
+
+//Q5 add to a string
+// function that takes in a string and addes "New" to the beginning of it
+
+function addToString(string) {
+  return "New " + string;
+}
+console.log("New String is: " + addToString("Hello"));
+
+//Q6 Sum Of Two Number Greater than 150
+// function that takes in two numbers and returns true if their is a greater than 150
+function greterThan150(num1, num2) {
+  let sum = num1 + num2;
+  if (sum >= 150) {
+    return true;
+  }
+  return false;
+}
+console.log("Sum is: " + greterThan150(50, 50));
+
+//Q7 greater than or equal to zero
+//function that takes  in a number and returns true if they're greater than or equal to 0
+function greaterThanEqualTozero(num) {
+  return num >= 0;
+}
+console.log("Greater than is: " + greaterThanEqualTozero(-1));
+
+//Q8 Inverted Boolean
+//function that takes in a boolean (true or false) and return the inverted boolean
+function invertedBoolean(bool) {
+  return !bool;
+}
+console.log("invered is: " + invertedBoolean(false));
+
+//Q9 is not the number 1
+//function that takes in any value and returns true if its NOT the number 1
+function isNotOne(num) {
+  return num !== 1;
+}
+console.log("Not 1 is: " + isNotOne(2));
+
+//Q10 calculate the remainder
+//function that takes in two numbers and returns their remainder when divided by each other
+function calculateRemainder(num1, num2) {
+  return num1 % num2;
+}
+console.log("Remainder is: " + calculateRemainder(12, 5));
+
+//Q11 is the number even
+//Function that takes in a number and returns true if the number is even
+function isEven(num) {
+  return num % 2 === 0;
+}
+console.log("Even or Not: " + isEven(4));
+
+//Q12 if a number is even, return 3, otherwise return -3
+// function that takes a number argument and returns 3 if the number is even. if the number is odd return -3
+function evenNumber(num) {
+  return num % 2 === 0 ? 3 : -3
+}
+console.log("numEven is: " + evenNumber(14));
+
+//Q13 check if a user is logged in AND subscribed 
+//function that takes in two strings. if the first string is equal to "loggedin" AND the second string is equal to "subscribed", return true. Otherwise, return false
+function isLoggedInAndSubscribed(val1,val2){
+    return val1 === "loggedIn" && val2 === "subscribed";
+}
+console.log("User Status is: " + isLoggedInAndSubscribed("loggedIn", "subscribed"));
+//Q13 check if a user is logged in AND subscribed 
+//function that takes in two strings. if the first string is equal to "loggedin" AND the second string is equal to "subscribed", return true. Otherwise, return false
+function isLoggedInOrSubscribed(val1,val2){
+    return val1 === "loggedIn" || val2 === "subscribed";
+}
+console.log("User Status is: " + isLoggedInOrSubscribed("loggedIn", "subscribed"));
+
+// Intermediate section
+console.log('------------THIS IS THE INTERMEDIATE SECTION---------------')
+
