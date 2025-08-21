@@ -1,4 +1,4 @@
-console.log('------------THIS IS THE EASY SECTION---------------')
+console.log("------------THIS IS THE EASY SECTION---------------");
 //Q1- sum if two numbers
 // function that takes in two numbers and returns the sum of them
 function sumOfTwoNumbers(num1, num2) {
@@ -86,37 +86,73 @@ console.log("Even or Not: " + isEven(4));
 //Q12 if a number is even, return 3, otherwise return -3
 // function that takes a number argument and returns 3 if the number is even. if the number is odd return -3
 function evenNumber(num) {
-  return num % 2 === 0 ? 3 : -3
+  return num % 2 === 0 ? 3 : -3;
 }
 console.log("numEven is: " + evenNumber(14));
 
-//Q13 check if a user is logged in AND subscribed 
+//Q13 check if a user is logged in AND subscribed
 //function that takes in two strings. if the first string is equal to "loggedin" AND the second string is equal to "subscribed", return true. Otherwise, return false
-function isLoggedInAndSubscribed(val1,val2){
-    return val1 === "loggedIn" && val2 === "subscribed";
+function isLoggedInAndSubscribed(val1, val2) {
+  return val1 === "loggedIn" && val2 === "subscribed";
 }
-console.log("User Status is: " + isLoggedInAndSubscribed("loggedIn", "subscribed"));
-//Q13 check if a user is logged in AND subscribed 
+console.log(
+  "User Status is: " + isLoggedInAndSubscribed("loggedIn", "subscribed")
+);
+//Q13 check if a user is logged in AND subscribed
 //function that takes in two strings. if the first string is equal to "loggedin" AND the second string is equal to "subscribed", return true. Otherwise, return false
-function isLoggedInOrSubscribed(val1,val2){
-    return val1 === "loggedIn" || val2 === "subscribed";
+function isLoggedInOrSubscribed(val1, val2) {
+  return val1 === "loggedIn" || val2 === "subscribed";
 }
-console.log("User Status is: " + isLoggedInOrSubscribed("loggedIn", "subscribed"));
+console.log(
+  "User Status is: " + isLoggedInOrSubscribed("loggedIn", "subscribed")
+);
 
 // Intermediate section
-console.log('------------THIS IS THE INTERMEDIATE SECTION-----------')
+console.log("------------THIS IS THE INTERMEDIATE SECTION-----------");
 
-//Q1 Truthy or Falsy 
-//Function that takes in two values and returns the first one if its falsy, otherwise return the second one 
-function truthyOrFalsy(val1, val2){
-  return !val1 ? val1 :val2 
-
+//Q1 Truthy or Falsy
+//Function that takes in two values and returns the first one if its falsy, otherwise return the second one
+function truthyOrFalsy(val1, val2) {
+  return !val1 ? val1 : val2;
 }
 console.log("True right, false left: " + truthyOrFalsy(0, 2));
 
 //Q2 array length
-// function that takes an array and returns its length 
-function arrayLength(array){
+// function that takes an array and returns its length
+function arrayLength(array) {
   return array.length;
 }
-console.log("Array is: " + arrayLength([1,5,3]));
+console.log("Array is: " + arrayLength([1, 5, 3]));
+
+//Q3 last element in array
+// function that takes an array and returns the last element
+function arrayLength2(array) {
+  return array[array.length - 1];
+}
+console.log("last array: " + arrayLength2([1, 5, 8, 3]));
+
+//Q4 array sum
+// function that takes an array and returns the sum of every element
+
+function arraySum(array) {
+  let sum = 0;
+  for (i = 0; i < array.length; i++) {
+    sum = sum + array[i];
+  }
+  return sum;
+}
+console.log("Array Sum: " + arraySum([1, 5, 8, 3]));
+
+//Q5 Progressive Sum
+//Function that takes a number and adds up all the numbers from 1 to the given number.
+//E.g. An input of 3 will give you 1 + 2 + 3, which equals 6
+
+let sum = 0;
+function ProgressiveSum(num) {
+  for (i = 1; i <= num; i++) {
+    sum = sum + i;
+  }
+  return sum;
+}
+console.log("Sum of Num: " + ProgressiveSum(3));
+
