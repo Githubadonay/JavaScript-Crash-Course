@@ -104,5 +104,19 @@ function isLoggedInOrSubscribed(val1,val2){
 console.log("User Status is: " + isLoggedInOrSubscribed("loggedIn", "subscribed"));
 
 // Intermediate section
-console.log('------------THIS IS THE INTERMEDIATE SECTION---------------')
+console.log('------------THIS IS THE INTERMEDIATE SECTION-----------')
 
+//Q1 Truthy or Falsy 
+//Function that takes in two values and returns the first one if its falsy, otherwise return the second one 
+function truthyOrFalsy(val1, val2){
+  return !val1 ? val1 :val2 
+
+}
+console.log("True right, false left: " + truthyOrFalsy(0, 2));
+
+//Q2 array length
+// function that takes an array and returns its length 
+function arrayLength(array){
+  return array.length;
+}
+console.log("Array is: " + arrayLength([1,5,3]));
