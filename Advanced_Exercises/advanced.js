@@ -31,39 +31,79 @@ console.log("Biggest Number: " + biggestNum([1, 5, 8, 3]));
 //Count evens
 //function tha takes an array of numbers and return the amount of even numbers in it
 function countEvens(array) {
-    let count = 0;
-    for (i = 0; i < array.length; i++) {
-      if(array[i] % 2 === 0){
-         count +=1;
-      }
+  let count = 0;
+  for (i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      count += 1;
     }
-    return count;
   }
-  console.log("Count Even: " + countEvens([1, 5, 8, 2, 12]));
+  return count;
+}
+console.log("Count Even: " + countEvens([1, 5, 8, 2, 12]));
 
-  // remove duplicates from an array 
-  // function that takes an array and returns an array with all duplicate elements removed
-  function removeDups(array){
-    let newArray = [];
-    for(i = 0; i < array.length; i++){
-        if(!newArray.includes(array[i])){
-            newArray.push(array[i])
-        }
+// remove duplicates from an array
+// function that takes an array and returns an array with all duplicate elements removed
+function removeDups(array) {
+  let newArray = [];
+  for (i = 0; i < array.length; i++) {
+    if (!newArray.includes(array[i])) {
+      newArray.push(array[i]);
     }
-    return newArray
   }
-  console.log("remove duplicate Number: " + removeDups([1,1,2,3]));
+  return newArray;
+}
+console.log("Remove duplicate Number: " + removeDups([1, 1, 2, 3]));
 // add .includes to notes. it checks for duplicates ex^^
 
-// How much is True 
+// How much is True
 //function that takes in an array if booleans and returns that number of true values present
-function trueCount(array){
-    let count = 0;
- for(i = 0; i< array.length; i++){
-    if(!!array[i]){
-        count+= 1;
+function trueCount(array) {
+  let count = 0;
+  for (i = 0; i < array.length; i++) {
+    if (!!array[i]) {
+      count += 1;
     }
- }
- return count;
+  }
+  return count;
 }
-console.log("remove duplicate Number: " + trueCount([true, true, false, true]));
+console.log("Count all true: " + trueCount([true, true, false, true]));
+
+//Check if all values are truthy
+function allTruthy(array) {
+  for (i = 0; i < array.length; i++) {
+    if (!array[i]) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log("Truthy true: " + allTruthy([true, true, false, true]));
+
+// turn all elements in an array into 0
+// function that takes in an array and returns an array of 0's of the same length
+function turnToZeros(array) {
+  let newArray = [];
+  for (i = 0; i < array.length; i++) {
+    newArray.push(0);
+  }
+  return newArray;
+}
+console.log("Turn any to 0: " + turnToZeros([true, false, true]));
+
+//sort numbers from smallest to largest
+//function that takes an array of numbers and sorts them from smallest to largest
+function smallTolarge(array) {
+  return array.sort();
+}
+console.log("Small to big: " + smallTolarge([3, 1, 6, 2]));
+// sort objects {}
+function smallTolargeObj(array) {
+  return array.sort((a, b) => a.id - b.id);
+}
+console.log(
+  "Small to big Obj: ",
+    smallTolargeObj([
+      { price: 5, id: 2 },
+      { price: 4, id: 1 },
+    ])
+);
