@@ -175,7 +175,7 @@ function findLargestNum(array) {
   let max = array[0];
   for (i = 0; i < array.length; i++) {
     if (max < array[i]) {
-      max = array[i]
+      max = array[i];
     }
   }
   return max;
@@ -183,24 +183,74 @@ function findLargestNum(array) {
 
 console.log("Largest number: " + findLargestNum([1, 3, 2, 4]));
 
-//Q8 reverse String 
-// function that takes in a string and returns a reversed version 
-//increamenting for loop 
-function reverseString(val){
-  let reverseString = '';
-  for(i = 0; i < val.length;i++){
-    reverseString = val[i] + reverseString
+//Q8 reverse String
+// function that takes in a string and returns a reversed version
+//increamenting for loop
+function reverseString(val) {
+  let reverseString = "";
+  for (i = 0; i < val.length; i++) {
+    reverseString = val[i] + reverseString;
   }
-return reverseString;
+  return reverseString;
 }
 console.log("Reverse: " + reverseString("Adonay"));
 //array reverse property
-// use the .split to make it in to a countable array 
+// use the .split to make it in to a countable array
 // use the .reverse to make it backwords
-function reverseString2(val){
-return val.split('').reverse().join('')
+function reverseString2(val) {
+  return val.split("").reverse().join("");
 }
 console.log("Reverse property method: " + reverseString2("Adonay"));
 
+//Q9 turn all elements in an array into 0
+//function thay takes in an array and returns an array of 0's of the same length
+// for loop way
+function turnToZeros(array) {
+  for (i = 0; i < array.length; i++) {
+    array[i] = 0;
+  }
+  return array;
+}
+console.log("Turn to Zeros: " + turnToZeros([true, true, true]));
+// fill solution
+function turnToZerosFill(array) {
+  return new Array(array.length).fill(0);
+}
+console.log("Turn to Zeros using FIll: " + turnToZerosFill([true, true, true]));
+//Map solution
+function turnToZerosMap(array) {
+  return array.map((out) => (out = 0));
+}
+console.log("Turn to Zeros using Map: " + turnToZerosMap([true, true, true]));
 
+//Q10 filer out all the oranges
+//function that takes in an array of fruits and removes all oranges from the array.
+function removeOranges(array) {
+  return array.filter((out) => out !== "Orange");
+}
+console.log(
+  "Remove using filter: " +
+    removeOranges(["Banana", "Orange", "Orange", "Apple"])
+);
 
+//Q11 Filter out all falsy values
+//Function that takes an array of values, filters out all the falsy values and only returns the truthy values
+//for Loop method
+function filterOutFalsyLoop(array) {
+  let truthyArr = [];
+  for (i = 0; i < array.length; i++) {
+    if (!!array[i] === true) {
+      truthyArr.push(array[i]);
+    }
+  }
+  return truthyArr;
+}
+
+console.log("Find the falsy Loop: " + filterOutFalsyLoop([0, "", 1, 2]));
+
+//Filter method
+function filterOutFalsyFilter(array) {
+  return array.filter((out) => !!out === true);
+}
+
+console.log("Find the falsy Filter: " + filterOutFalsyFilter([0, "", 1, 2]));
