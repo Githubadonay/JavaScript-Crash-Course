@@ -156,3 +156,51 @@ function ProgressiveSum(num) {
 }
 console.log("Sum of Num: " + ProgressiveSum(3));
 
+//Q6 Calculate Time
+// function that takes in a number of seconds and returns it in mm:ss format
+function calculateTime(seconds) {
+  let timeM = Math.floor(seconds / 60);
+  let timeS = seconds % 60;
+  if ((timeM.toString().length = 1)) {
+    timeM = "0" + timeM;
+  }
+
+  return timeM + ":" + timeS;
+}
+console.log("Timer min: " + calculateTime(73));
+
+//Q7 Find the largest number
+//Function that takes in an array and returns the largest number
+function findLargestNum(array) {
+  let max = array[0];
+  for (i = 0; i < array.length; i++) {
+    if (max < array[i]) {
+      max = array[i]
+    }
+  }
+  return max;
+}
+
+console.log("Largest number: " + findLargestNum([1, 3, 2, 4]));
+
+//Q8 reverse String 
+// function that takes in a string and returns a reversed version 
+//increamenting for loop 
+function reverseString(val){
+  let reverseString = '';
+  for(i = 0; i < val.length;i++){
+    reverseString = val[i] + reverseString
+  }
+return reverseString;
+}
+console.log("Reverse: " + reverseString("Adonay"));
+//array reverse property
+// use the .split to make it in to a countable array 
+// use the .reverse to make it backwords
+function reverseString2(val){
+return val.split('').reverse().join('')
+}
+console.log("Reverse property method: " + reverseString2("Adonay"));
+
+
+
