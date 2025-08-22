@@ -254,3 +254,25 @@ function filterOutFalsyFilter(array) {
 }
 
 console.log("Find the falsy Filter: " + filterOutFalsyFilter([0, "", 1, 2]));
+
+//Q12 truthy to true, falsy to false
+// function that takes in array of truthy and falsy values, return the same array of elements into its boolean values
+function convertToBooleanLoop(array) {
+  let newArray = [];
+  for(i = 0; i < array.length;i++){
+    if(!!array[i] === true){
+      newArray.push = true;
+    }else if(!!array[i] === false){
+      newArray.push = false;
+    }
+  }
+  return newArray;
+}
+console.log("change falsy or truthy: " + convertToBooleanLoop([500,0,"adonay","",[]]));
+// map method
+function convertToBooleanMap(array) {
+  return array.map(out => !!out)
+}
+console.log("change Map method falsy or truthy: " + convertToBooleanMap([500,0,"adonay","",[]]));
+
+
